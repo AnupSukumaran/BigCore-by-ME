@@ -17,11 +17,16 @@ class CoreTableViewCell: UITableViewCell {
     @IBOutlet weak var imgView: UIImageView!
     
     
+    @IBOutlet weak var textViewCon: UITextView!
+    
+    
     func configure(apiData: APIData) {
         
         DispatchQueue.main.async {
+            
             self.authorLabel.text = apiData.author
             self.taglabel.text = apiData.tags
+            self.textViewCon.text = apiData.tags
             
             if let url = apiData.media {
                 self.imgView.loadImage(url,placeHolder:UIImage(named: "placeholder"))
@@ -30,6 +35,8 @@ class CoreTableViewCell: UITableViewCell {
         }
         
     }
+    
+    
     
     
     override func awakeFromNib() {

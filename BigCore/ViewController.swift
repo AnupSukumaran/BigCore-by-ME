@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -35,6 +35,8 @@ class ViewController: UIViewController {
        updateTableContent()
     }
     
+    
+   
     
     func updateTableContent() {
         
@@ -128,9 +130,56 @@ extension ViewController: UITableViewDataSource {
             cell.configure(apiData: apiData)
         }
         
+
+        
+        cell.textViewCon.tag = indexPath.row
+        cell.textViewCon.delegate = self
+        
+       
+        
         return cell
         
     }
+    
+    
+   
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+         print("Working2 = \(textView.tag), text = \(textView.text)")
+        
+        
+            let obj2 = fetchedResultController.fetchedObjects
+        
+            let data =  obj2 as! [APIData]
+            
+            data[textView.tag].setValue(textView.text, forKey: "tags")
+             CoreDataStack.saveContext()
+            
+            do {
+                try self.fetchedResultController.performFetch()
+                
+                print("COUNT FETCHED 2 FIRST: \(String(describing: self.fetchedResultController.sections?[0].numberOfObjects))")
+            }
+            catch let error {
+                print("ERROR: \(error)")
+            }
+
+        
+        self.tableView.reloadData()
+    }
+
+}
+
+
+extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+    
+        tableView.endEditing(true)
+        
+    }
+    
     
 }
 
@@ -143,6 +192,9 @@ extension ViewController:NSFetchedResultsControllerDelegate {
             self.tableView.insertRows(at: [newIndexPath!], with: .automatic)
         case .delete:
             self.tableView.deleteRows(at: [indexPath!], with: .automatic)
+        case .update:
+            print("Here here")
+            //self.tableView.reloadRows(at: [indexPath!], with: .automatic)
         default:
             break
         }
@@ -150,10 +202,12 @@ extension ViewController:NSFetchedResultsControllerDelegate {
     }
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        print("Here here1")
         self.tableView.endUpdates()
     }
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        print("Here here2")
         tableView.beginUpdates()
     }
     
