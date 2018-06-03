@@ -13,6 +13,10 @@
 		5A3CFBBC20C3D70A0079FFED /* BigCore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CFBBA20C3D70A0079FFED /* BigCore.xcdatamodeld */; };
 		5A3CFBBE20C3D70C0079FFED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3CFBBD20C3D70C0079FFED /* Assets.xcassets */; };
 		5A3CFBC120C3D70C0079FFED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A3CFBBF20C3D70C0079FFED /* LaunchScreen.storyboard */; };
+		5A3CFBC920C3D7350079FFED /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CFBC820C3D7350079FFED /* CoreDataStack.swift */; };
+		5A3CFBCB20C3D9940079FFED /* CoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CFBCA20C3D9940079FFED /* CoreTableViewCell.swift */; };
+		5A3CFBCD20C3DB760079FFED /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CFBCC20C3DB760079FFED /* APIService.swift */; };
+		5A3CFBCF20C3F24B0079FFED /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CFBCE20C3F24B0079FFED /* Extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		5A3CFBBD20C3D70C0079FFED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A3CFBC020C3D70C0079FFED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A3CFBC220C3D70C0079FFED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A3CFBC820C3D7350079FFED /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		5A3CFBCA20C3D9940079FFED /* CoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTableViewCell.swift; sourceTree = "<group>"; };
+		5A3CFBCC20C3DB760079FFED /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		5A3CFBCE20C3F24B0079FFED /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,10 @@
 			isa = PBXGroup;
 			children = (
 				5A3CFBB320C3D70A0079FFED /* AppDelegate.swift */,
+				5A3CFBCE20C3F24B0079FFED /* Extention.swift */,
+				5A3CFBCC20C3DB760079FFED /* APIService.swift */,
+				5A3CFBC820C3D7350079FFED /* CoreDataStack.swift */,
+				5A3CFBCA20C3D9940079FFED /* CoreTableViewCell.swift */,
 				5A3CFBB520C3D70A0079FFED /* ViewController.swift */,
 				5A3CFBB720C3D70A0079FFED /* Main.storyboard */,
 				5A3CFBBD20C3D70C0079FFED /* Assets.xcassets */,
@@ -141,6 +153,10 @@
 				5A3CFBBC20C3D70A0079FFED /* BigCore.xcdatamodeld in Sources */,
 				5A3CFBB620C3D70A0079FFED /* ViewController.swift in Sources */,
 				5A3CFBB420C3D70A0079FFED /* AppDelegate.swift in Sources */,
+				5A3CFBC920C3D7350079FFED /* CoreDataStack.swift in Sources */,
+				5A3CFBCD20C3DB760079FFED /* APIService.swift in Sources */,
+				5A3CFBCB20C3D9940079FFED /* CoreTableViewCell.swift in Sources */,
+				5A3CFBCF20C3F24B0079FFED /* Extention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
